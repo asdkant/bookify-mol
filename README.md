@@ -1,11 +1,11 @@
 # bookify-mol
-scripts for creating an ebook of the web novel [Mother of Learning](https://www.fictionpress.com/s/2961893/1/Mother-of-Learning) by nobody103 (Domagoj Kurmaic).
+These are scripts for creating an ebook of the web novel [Mother of Learning](https://www.fictionpress.com/s/2961893/1/Mother-of-Learning) by nobody103 (Domagoj Kurmaic). To run this you need Linux (I run Arch Linux) or something fairly similar -- I guess it would work in OSX, it'll probably work in cygwin environments like [mobaXterm](http://mobaxterm.mobatek.net/) or [Babun](http://babun.github.io/).
 
-The output is intended for use as an input file on [Calibre](https://calibre-ebook.com/), which will create an ebook file in whatever format you like.
+The output is intended for use as an input file on [Calibre](https://calibre-ebook.com/), which will create an ebook file in whatever format you like. You'll probably want to tune the conversion so that it adds `<h1>` and `<h2>` header tags to the book's table of contents.
 
 ## Requirements / stuff used by these scripts
 * bash
-* standard linux tools:
+* standard linux userland tools:
   * sed
   * tr
 * **curl (you may need to install this one)**
@@ -24,7 +24,6 @@ The output is intended for use as an input file on [Calibre](https://calibre-ebo
 
 
 ## Instructions
-
 ```bash
 bash dl.sh
 bash build.sh
