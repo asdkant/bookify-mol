@@ -1,6 +1,24 @@
 #!/bin/bash 
 mkdir -p dl/arc{1,2,3}
-curl 'https://www.fictionpress.com/s/2961893/[1-26]/Mother-of-Learning'  -o 'dl/arc1/#1.html'
-curl 'https://www.fictionpress.com/s/2961893/[27-54]/Mother-of-Learning' -o 'dl/arc2/#1.html'
-curl 'https://www.fictionpress.com/s/2961893/[55-73]/Mother-of-Learning' -o 'dl/arc3/#1.html'
 
+for i in {1..9}; do
+	wget -bq https://www.fictionpress.com/s/2961893/$i/Mother-of-Learning -O dl/arc1/0$i.html &
+	echo $i ; sleep 0.3
+done
+
+for i in {10..26}; do
+	wget -bq https://www.fictionpress.com/s/2961893/$i/Mother-of-Learning -O dl/arc1/$i.html &
+	echo $i ; sleep 0.3
+done
+
+for i in {27..54}; do
+	wget -bq https://www.fictionpress.com/s/2961893/$i/Mother-of-Learning -O dl/arc2/$i.html &
+	echo $i ; sleep 0.3
+done
+
+for i in {55..73}; do
+	wget -bq https://www.fictionpress.com/s/2961893/$i/Mother-of-Learning -O dl/arc3/$i.html &
+	echo $i ; sleep 0.3
+done
+
+echo "Done!"

@@ -5,7 +5,10 @@ import sys, locale, bs4, unicodedata, re
 from bs4 import BeautifulSoup
 ch_file = sys.argv[1]
 raw_html = open(ch_file).read().decode(sys.stdin.encoding or locale.getpreferredencoding(True))
-#raw_html = "".join(line.strip() for line in raw_html.split("\n"))
+#raw_file = open(ch_file).read()
+#raw_html = raw_file.decode('utf-8', errors='ignore')
+#print raw_html
+
 html = BeautifulSoup(raw_html, "lxml")
 
 #html = BeautifulSoup(open(sys.argv[1]).read().decode(sys.stdin.encoding or locale.getpreferredencoding(True)), "lxml")
@@ -24,7 +27,6 @@ cnum.parent.extract()
 ctitle.parent.extract()
 
 print chapter.encode_contents().replace("</p><p>","</p>\n<p>")+'\n\n\n'
-
 
 
 """

@@ -13,8 +13,3 @@ for a in $(ls dl/arc? -d -1 | tr -d 'dl/arc') ; do # a == 1, 2, 3, etc.
 		echo "chapter $c" | sed -e 's|dl/arc./||g' | sed -e 's/\.html//g'
 	done
 done
-
-# for i in dl/*.html; do
-# 	./chapextract.py $i >> 'Mother of Learning a1c01-a'$lastarc'c'$lastchap' - nobody103 (Domagoj Kurmaic).html'
-# 	echo $i
-# done
