@@ -3,6 +3,8 @@ These are scripts for creating an ebook of the web novel [Mother of Learning](ht
 
 The output is intended for use as an input file on [Calibre](https://calibre-ebook.com/), which will create an ebook file in whatever format you like. You'll probably want to tune the conversion so that it adds `<h1>` and `<h2>` header tags to the book's table of contents. I update `dl.sh` when a new chapter is released and upload a release, if you just want the ebook it's easier to grab that.
 
+You can find a list of the Reddit discussion threads related to the novel on [this reddit post](https://www.reddit.com/r/motheroflearning/comments/5v0zl0/links_to_discussion_threads/) (most are from r/noveltranslations and r/rational) 
+
 ## Requirements / stuff used by these scripts
 * bash
 * standard linux userland tools:
